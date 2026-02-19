@@ -47,28 +47,17 @@ No preparation needed.
 
 ## Conceptual tool map (for discussion)
 
+This is one possible shape. Please feel free to ignore or redesign it.
+
 ```mermaid
 flowchart TD
-  U[Patient or User] --> UI[Web or App Interface]
+  U[Patient question]
 
-  UI -->|If logged in| M[Members API profile and baseline data]
-  UI -->|Always| KB[Knowledge base clinical guidance and FAQs]
-  UI -->|Always| OD[Aggregated outcomes data store]
+  U --> D[Available data sources]
+  U --> AI[AI capabilities]
 
-  subgraph Orchestration
-    R[Retriever or query builder]
-    P[Prompt builder and context assembly]
-    LLM[AI model response generation]
-    V[Verification and safety checks]
-  end
+  D --> S[Response generation]
+  AI --> S
 
-  M --> R
-  KB --> R
-  OD --> R
-  R --> P --> LLM --> V --> UI
-
-  V -->|If insufficient data| UI
-  V -->|If needs escalation| ESC[Suggest clinician or guidance]
-  ESC --> UI
-
+  S --> R[Patient-facing answer]
 
