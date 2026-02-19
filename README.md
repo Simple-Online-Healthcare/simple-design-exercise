@@ -9,7 +9,7 @@ A typical question might be:
 
 Assume we hold a range of internal information such as anonymised outcome data, knowledge base content and clinical guidance. AI models could be used to help generate personalised responses.
 
-This is a **theoretical design exercise** — you don’t need to build anything or have deep AI experience.
+This is a **theoretical design exercise** you don’t need to build anything or have deep AI experience.
 
 ---
 
@@ -28,14 +28,7 @@ You can make reasonable assumptions — just state them.
 ---
 
 ## We’ll explore together
-We’re interested in how you think about:
-- clarifying requirements and defining the problem
-- what a good and trustworthy response looks like
-- how AI might be used within the experience
-- risks and failure modes
-- how you would measure success
-
-There is no single correct answer — treat this as a collaborative design discussion.
+There is no single correct answer, treat this as a collaborative design discussion.
 
 ### Assumptions
 Assume outcome data exists for ~2,000 patients but cohort sizes for specific profiles (e.g. older patients with Type 2 diabetes) may be as small as 30-50."
