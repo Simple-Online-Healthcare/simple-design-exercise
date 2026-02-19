@@ -16,7 +16,7 @@ This is a **theoretical design exercise** — you don’t need to build anything
 ## The task
 Design an approach for a tool that can generate a personalised response to a patient asking:
 
-> **“Show me patients like me and what results they saw.”**
+> **"Show me patients like me and what results they saw. Will this work for someone like me?"**
 
 Assume:
 - the response must be trustworthy and suitable for a healthcare setting
@@ -37,6 +37,9 @@ We’re interested in how you think about:
 
 There is no single correct answer — treat this as a collaborative design discussion.
 
+### Assumptions
+Assume outcome data exists for ~2,000 patients but cohort sizes for specific profiles (e.g. older patients with Type 2 diabetes) may be as small as 30-50."
+
 ---
 
 ## Format
@@ -47,7 +50,7 @@ No preparation needed.
 
 ## Conceptual tool map (for discussion)
 
-This is one possible shape. Please feel free to ignore or redesign it.
+This is deliberately naive, feel free to tear it apart.
 
 ```mermaid
 flowchart TD
