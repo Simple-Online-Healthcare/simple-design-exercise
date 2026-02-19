@@ -49,17 +49,17 @@ No preparation needed.
 
 ```mermaid
 flowchart TD
-  U[Patient / User] --> UI[Web / App UI\n"Patients like me" question]
+  U[Patient or User] --> UI[Web or App Interface]
 
-  UI -->|If logged in| M[Members API\n(profile, baseline characteristics)]
-  UI -->|Always| KB[Knowledge Base\n(clinical guidance, FAQs, policies)]
-  UI -->|Always| OD[Outcomes Data Store\n(aggregated, anonymised results)]
+  UI -->|If logged in| M[Members API profile and baseline data]
+  UI -->|Always| KB[Knowledge base clinical guidance and FAQs]
+  UI -->|Always| OD[Aggregated outcomes data store]
 
-  subgraph Orchestration["AI Orchestrator (logical layer)"]
-    R[Retriever / Query builder\n(select relevant sources)]
-    P[Prompt builder\n(instructions + context)]
-    LLM[AI Model\n(generate response)]
-    V[Verifier / Safety check\n(overclaiming, missing caveats, policy)]
+  subgraph Orchestration
+    R[Retriever or query builder]
+    P[Prompt builder and context assembly]
+    LLM[AI model response generation]
+    V[Verification and safety checks]
   end
 
   M --> R
@@ -67,7 +67,8 @@ flowchart TD
   OD --> R
   R --> P --> LLM --> V --> UI
 
-  V -->|If insufficient / uncertain| UI
-  V -->|If high-risk / needs clinician| ESC[Escalation / Guidance\n(e.g., suggest clinician review)]
+  V -->|If insufficient data| UI
+  V -->|If needs escalation| ESC[Suggest clinician or guidance]
   ESC --> UI
+
 
